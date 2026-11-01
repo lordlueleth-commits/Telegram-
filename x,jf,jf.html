@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Interactive Inspiration Box</title>
+
+  <style>
+    body {
+      background-color: #0b0f19;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      font-family: sans-serif;
+    }
+
+    .card {
+      max-width: 450px;
+      margin: 0 auto;
+      background: #1e293b;
+      padding: 36px 24px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    #secret-text {
+      font-size: 20px;
+      color: #94a3b8;
+      margin: 24px 0;
+      min-height: 30px;
+    }
+
+    .reveal-btn {
+      background: linear-gradient(135deg, #10b981, #06b6d4);
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .reveal-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h2>Daily Inspiration Box</h2>
+
+    <!-- THE PARAGRAPH WITH THE NAME TAG -->
+    <p id="secret-text">
+      Click the button below to see today's thought! 💭
+    </p>
+
+    <!-- THE BUTTON THAT CASTS THE SPELL -->
+    <button class="reveal-btn" onclick="revealThought()">
+      Click for Wisdom ✨
+    </button>
+  </div>
+
+  <!-- THE JAVASCRIPT RECIPE -->
+  <script>
+    function revealThought() {
+      document.getElementById("secret-text").innerText =
+        "🌟 The best way to predict the future is to create it.";
+
+      document.getElementById("secret-text").style.color = "#38bdf8";
+    }
+  </script>
+</body>
+</html>
